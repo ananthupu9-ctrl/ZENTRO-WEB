@@ -724,13 +724,19 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-giant-wordmark {
-    font-size: clamp(2.6rem, 14vw, 5.5rem);
+    position: absolute;
+    top: 52%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: clamp(2.6rem, 14.5vw, 5.5rem);
     line-height: 0.88;
     letter-spacing: -0.04em;
-    margin-top: auto;
-    margin-bottom: clamp(1.4rem, 3.8vh, 2.25rem);
+    margin: 0;
     z-index: 3;
     padding: 0 0.6rem;
+    text-align: center;
   }
 }
 
