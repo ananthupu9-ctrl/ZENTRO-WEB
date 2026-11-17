@@ -634,7 +634,7 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
       if (naturalWidth > maxAvailableWidth && maxAvailableWidth > 0) {
         const currentSize = parseFloat(window.getComputedStyle(wordmark).fontSize);
         const scale = maxAvailableWidth / naturalWidth;
-        const minFloor = window.innerWidth <= 768 ? 68 : 80;
+        const minFloor = window.innerWidth <= 768 ? 32 : 60;
         const calculated = Math.max(minFloor, Math.floor(currentSize * scale * 0.98));
         wordmark.style.fontSize = `${calculated}px`;
       }
