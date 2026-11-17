@@ -86,21 +86,19 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .top-announcement-bar {
-    padding: 0.5rem 1rem;
-    font-size: 0.6rem;
-    gap: 0.5rem;
-    line-height: 1.4;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    gap: 0.35rem 0.75rem;
+    line-height: 1.45;
     text-align: center;
   }
 }
 
-@media (max-width: 480px) {
-  .top-announcement-bar {
-    gap: 0.35rem 0.65rem;
-    padding: 0.45rem 0.5rem;
-    font-size: 0.58rem;
-  }
-  .top-announcement-bar .sep {
+@media (max-width: 640px) {
+  .top-announcement-bar .sep,
+  .top-announcement-bar a[href*="wa.me"],
+  .top-announcement-bar a[href*="instagram.com"] {
     display: none;
   }
 }
@@ -436,9 +434,9 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   .hero-vanta {
     position: relative;
     width: 100%;
-    min-height: clamp(560px, 86svh, 680px);
-    height: clamp(560px, 86svh, 680px);
-    padding: 1.25rem 1rem 0.5rem 1rem;
+    min-height: clamp(610px, 84svh, 730px);
+    height: clamp(610px, 84svh, 730px);
+    padding: 1.35rem 1.15rem 0.5rem 1.15rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -465,6 +463,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0.75rem;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -478,7 +477,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 @media (max-width: 768px) {
   .hero-left-editorial {
     display: block !important;
-    max-width: 115px;
+    max-width: 44%;
     text-align: left;
   }
 }
@@ -494,9 +493,15 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-left-editorial p {
-    font-size: 0.52rem;
-    letter-spacing: 0.14em;
-    line-height: 1.35;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+  }
+  .hero-left-editorial p + .dash + p {
+    margin-top: 0.65rem !important;
+    font-size: 0.6rem !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.08em !important;
   }
 }
 
@@ -510,8 +515,8 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-left-editorial .dash {
-    width: 18px;
-    margin-top: 0.35rem;
+    width: 20px;
+    margin-top: 0.45rem;
   }
 }
 
@@ -522,7 +527,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-right-editorial {
-    max-width: 175px;
+    max-width: 54%;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -542,10 +547,10 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-statement-headline {
-    font-size: clamp(1.4rem, 6.2vw, 2.1rem);
+    font-size: clamp(1.55rem, 6.8vw, 2.3rem);
     line-height: 0.94;
     letter-spacing: -0.04em;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.45rem;
   }
 }
 
@@ -561,11 +566,11 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-statement-sub {
-    font-size: 0.5rem;
-    letter-spacing: 0.1em;
-    line-height: 1.35;
-    margin-bottom: 0.65rem;
-    max-width: 170px;
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    max-width: 200px;
   }
 }
 
@@ -590,9 +595,9 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-cta-link {
-    font-size: 0.625rem;
+    font-size: 0.72rem;
     letter-spacing: 0.12em;
-    padding-bottom: 0.15rem;
+    padding-bottom: 0.2rem;
     margin: 0;
     align-self: flex-end;
   }
@@ -620,8 +625,8 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 80%;
-    max-height: 540px;
+    height: 62%;
+    max-height: 440px;
     width: auto;
     z-index: 5;
     pointer-events: none;
@@ -645,7 +650,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   .hero-model-wrap img {
     height: 100%;
     width: auto;
-    max-width: 82vw;
+    max-width: 92vw;
   }
 }
 
@@ -674,13 +679,13 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 768px) {
   .hero-giant-wordmark {
-    font-size: clamp(2.8rem, 15.5vw, 6.5rem);
-    line-height: 0.86;
+    font-size: clamp(2.5rem, 13.5vw, 5.5rem);
+    line-height: 0.88;
     letter-spacing: -0.04em;
     margin-top: auto;
-    margin-bottom: clamp(1rem, 3vh, 2rem);
+    margin-bottom: clamp(1.75rem, 4.5vh, 2.75rem);
     z-index: 3;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }
 
@@ -701,42 +706,61 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 880px) {
   .shelf-vanta {
-    padding: 1.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .shelf-vanta {
-    padding: 1.15rem 0.65rem;
+    padding: 0.75rem 1.25rem;
   }
 }
 
 .shelf-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(0.4rem, 1.8vw, 2.5rem);
+  gap: 2.5rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+@media (max-width: 880px) {
+  .shelf-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .shelf-card {
   display: flex;
   align-items: center;
-  gap: clamp(0.35rem, 1.4vw, 1.25rem);
+  gap: 1.25rem;
   text-decoration: none;
   color: inherit;
   transition: transform var(--transition-fast);
   min-width: 0;
 }
 
+@media (max-width: 880px) {
+  .shelf-card {
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #222220;
+  }
+  .shelf-card:last-child {
+    border-bottom: none;
+  }
+}
+
 .shelf-thumb {
-  width: clamp(38px, 7.5vw, 85px);
-  height: clamp(38px, 7.5vw, 85px);
+  width: 85px;
+  height: 85px;
   aspect-ratio: 1;
   background-color: #222;
   overflow: hidden;
   flex-shrink: 0;
   filter: grayscale(100%) contrast(1.1);
+}
+
+@media (max-width: 880px) {
+  .shelf-thumb {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 .shelf-thumb img {
@@ -758,31 +782,29 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 }
 
 .shelf-num-tag {
-  font-size: clamp(0.42rem, 1.2vw, 0.625rem);
+  font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: clamp(0.08em, 0.4vw, 0.24em);
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-muted-light);
-  margin-bottom: 0.2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 0.3rem;
 }
 
 .shelf-title {
   font-family: var(--font-display);
-  font-size: clamp(0.68rem, 1.8vw, 1.15rem);
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #FFFFFF;
-  margin-bottom: 0.2rem;
-  line-height: 1.15;
-  white-space: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
   transition: color var(--transition-fast);
+}
+
+@media (max-width: 880px) {
+  .shelf-title {
+    font-size: 1.05rem;
+  }
 }
 
 .shelf-card:hover .shelf-title {
@@ -790,14 +812,14 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 }
 
 .shelf-link {
-  font-size: clamp(0.42rem, 1.2vw, 0.625rem);
+  font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: clamp(0.06em, 0.4vw, 0.16em);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-muted-light);
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
   transition: color var(--transition-fast);
   white-space: nowrap;
 }
@@ -817,7 +839,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 640px) {
   .collection-section {
-    padding: 2.75rem 0.85rem;
+    padding: 3.25rem 1.25rem;
   }
 }
 
@@ -826,25 +848,29 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 2.5rem;
+  gap: 1rem;
 }
 
 @media (max-width: 640px) {
   .collection-header {
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.75rem;
+    margin-bottom: 1.75rem;
   }
 }
 
 .collection-title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 4vw, 3rem);
+  font-size: clamp(1.65rem, 4.5vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--color-black);
+  line-height: 1.05;
 }
 
 .collection-view-all {
-  font-size: clamp(0.5rem, 1.2vw, 0.6875rem);
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -858,9 +884,27 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(0.4rem, 1.8vw, 1.5rem);
+  gap: 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.9rem;
+  }
+  .collection-item:last-child {
+    grid-column: 1 / -1;
+  }
+  .collection-item:last-child .collection-media {
+    aspect-ratio: 16 / 10;
+  }
+  .collection-item:last-child .collection-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .collection-item {
@@ -878,7 +922,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background-color: var(--color-canvas-card);
-  margin-bottom: clamp(0.4rem, 1vw, 1rem);
+  margin-bottom: 0.85rem;
   filter: grayscale(100%) contrast(1.1);
   position: relative;
 }
@@ -900,28 +944,38 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: clamp(0.25rem, 0.8vw, 0.5rem);
-  gap: 0.35rem;
+  padding-top: 0.35rem;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .collection-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding-top: 0.15rem;
+  }
 }
 
 .collection-label {
   font-family: var(--font-display);
-  font-size: clamp(0.68rem, 1.8vw, 1.15rem);
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-black);
-  line-height: 1.15;
-  white-space: normal;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .collection-label {
+    font-size: 0.95rem;
+  }
 }
 
 .collection-explore {
-  font-size: clamp(0.42rem, 1.2vw, 0.6875rem);
+  font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: clamp(0.06em, 0.4vw, 0.16em);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-muted);
   display: inline-flex;
@@ -940,37 +994,59 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
    SECTION 03 — COUTURE BRIDE & GROOM ATELIER (COMPACT EDITORIAL)
    ========================================================================== */
 .feature-editorial-section {
-  padding: clamp(2rem, 5vw, 3.5rem) clamp(0.75rem, 3vw, 2.5rem);
+  padding: 3.5rem 2.5rem;
   background-color: var(--color-canvas);
   border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 640px) {
+  .feature-editorial-section {
+    padding: 2.5rem 1.25rem;
+  }
 }
 
 .feature-editorial-container {
   max-width: 1160px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: clamp(120px, 35vw, 450px) 1fr;
+  grid-template-columns: 450px 1fr;
   background-color: var(--color-canvas);
   border: 1px solid var(--color-border);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
   overflow: hidden;
-  min-height: auto;
+  min-height: 480px;
+  max-height: 540px;
+}
+
+@media (max-width: 880px) {
+  .feature-editorial-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    max-height: none;
+  }
 }
 
 .feature-portrait-side {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 260px;
+  min-height: 380px;
   background-color: #0E0D0C;
   overflow: hidden;
+}
+
+@media (max-width: 880px) {
+  .feature-portrait-side {
+    min-height: 300px;
+    height: 300px;
+  }
 }
 
 .feature-portrait-side img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   filter: grayscale(100%) contrast(1.05);
   transition: transform 0.8s var(--transition-smooth);
 }
@@ -981,23 +1057,23 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 .feature-floating-pill {
   position: absolute;
-  bottom: clamp(0.5rem, 1.5vw, 1.5rem);
-  left: clamp(0.5rem, 1.5vw, 1.5rem);
+  bottom: 1.25rem;
+  left: 1.25rem;
   top: auto;
   transform: none;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  padding: clamp(0.35rem, 1vw, 0.65rem) clamp(0.65rem, 1.8vw, 1.35rem);
+  padding: 0.55rem 1.15rem;
   border-radius: 9999px;
-  font-size: clamp(0.48rem, 1.2vw, 0.6875rem);
+  font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-black);
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.4rem;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.95);
@@ -1015,81 +1091,90 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(1rem, 2.8vw, 3.25rem);
+  padding: 2.75rem 3.25rem;
   background-color: var(--color-canvas);
   position: relative;
   min-width: 0;
 }
 
+@media (max-width: 880px) {
+  .feature-text-side {
+    padding: 1.85rem 1.35rem;
+  }
+}
+
 .feature-statement-title {
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2.8vw, 2.85rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.85rem);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.04em;
   color: var(--color-black);
-  margin-bottom: clamp(0.35rem, 1vw, 0.85rem);
+  margin-bottom: 0.85rem;
 }
 
 .feature-statement-desc {
-  font-size: clamp(0.52rem, 1.2vw, 0.6875rem);
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-muted);
-  line-height: 1.45;
-  max-width: 400px;
-  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  line-height: 1.55;
+  max-width: 440px;
+  margin-bottom: 1.1rem;
 }
 
 .bridal-highlights {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.35rem, 0.8vw, 0.65rem);
-  margin: clamp(0.5rem, 1vw, 1rem) 0 clamp(0.75rem, 1.5vw, 1.5rem) 0;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem 0;
   border-top: 1px solid var(--color-border);
-  padding-top: clamp(0.5rem, 1vw, 1.15rem);
+  padding-top: 1.15rem;
 }
 
 .bridal-highlight-item {
   display: flex;
   align-items: center;
-  gap: clamp(0.4rem, 1vw, 0.85rem);
-  font-size: clamp(0.5rem, 1.1vw, 0.6875rem);
+  gap: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-black);
+  line-height: 1.4;
 }
 
 .bridal-highlight-item .highlight-num {
   font-family: var(--font-display);
-  font-size: clamp(0.5rem, 1.1vw, 0.6875rem);
+  font-size: 0.75rem;
   font-weight: 800;
   color: var(--color-muted);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  flex-shrink: 0;
 }
 
 .feature-bottom-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: clamp(0.65rem, 1.5vw, 1.5rem);
+  padding-top: 1.35rem;
   border-top: 1px solid var(--color-border);
+  gap: 1rem;
 }
 
 .feature-discover-link {
-  font-size: clamp(0.48rem, 1.1vw, 0.6875rem);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-black);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.45rem;
   border-bottom: 1.5px solid var(--color-black);
-  padding-bottom: 0.15rem;
+  padding-bottom: 0.2rem;
   transition: opacity var(--transition-fast);
   white-space: nowrap;
 }
@@ -1099,15 +1184,15 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 }
 
 .feature-brand-emblem {
-  width: clamp(28px, 5vw, 40px);
-  height: clamp(28px, 5vw, 40px);
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1.5px solid var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: clamp(0.68rem, 1.5vw, 1rem);
+  font-size: 0.95rem;
   font-weight: 800;
   flex-shrink: 0;
 }
@@ -2411,11 +2496,12 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 .atelier-main-title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 4.5vw, 3.5rem);
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--color-black);
   margin-bottom: 0.5rem;
+  line-height: 1.05;
 }
 
 .atelier-sub-title {
@@ -2424,25 +2510,33 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-muted);
+  line-height: 1.5;
 }
 
 .atelier-details-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(0.75rem, 1.8vw, 1.5rem);
+  gap: 1.5rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .atelier-details-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(0.5rem, 1.5vw, 1rem);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .atelier-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
   }
 }
 
 .atelier-card {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  padding: clamp(1.15rem, 2.2vw, 2.25rem) clamp(0.85rem, 1.8vw, 1.75rem);
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2451,28 +2545,34 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+@media (max-width: 640px) {
+  .atelier-card {
+    padding: 1.65rem 1.35rem;
+  }
+}
+
 .atelier-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
 .atelier-card-num {
-  font-size: clamp(0.48rem, 1.1vw, 0.625rem);
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
 }
 
 .atelier-card-heading {
   font-family: var(--font-display);
-  font-size: clamp(0.85rem, 1.8vw, 1.25rem);
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color-black);
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--color-border);
   line-height: 1.2;
 }
@@ -2480,8 +2580,8 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 .atelier-card-body {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  font-size: 0.8125rem;
+  gap: 0.65rem;
+  font-size: 0.875rem;
   color: var(--color-black);
   min-width: 0;
   max-width: 100%;
@@ -2496,8 +2596,14 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   color: var(--color-black);
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .timing-highlight {
+    font-size: 1.2rem;
+  }
 }
 
 .ist-badge {
@@ -2652,4 +2758,83 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 .atelier-wa-btn:hover {
   opacity: 0.9;
+}
+
+/* ==========================================================================
+   MOBILE ERGONOMICS & INTELLIGENT READABILITY POLISH
+   ========================================================================== */
+@media (max-width: 640px) {
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .gallery-title {
+    font-size: 1.75rem;
+    line-height: 1.05;
+  }
+
+  .gallery-arrow-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-slide-desc {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .noir-reviews-title {
+    font-size: clamp(1.9rem, 8.5vw, 2.75rem);
+  }
+
+  .noir-reviews-subtitle {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .noir-card-quote {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .contact-val.highlight {
+    font-size: 1rem;
+  }
+
+  .atelier-cta-btn,
+  .atelier-wa-btn {
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .timing-sub,
+  .payment-methods-list,
+  .address-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .timing-note,
+  .payment-sub {
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .footer-copy {
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+
+  .footer-links {
+    font-size: 0.9rem;
+    gap: 0.85rem;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }
