@@ -2666,6 +2666,10 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   line-height: 1.5;
 }
 
+.atelier-mobile-tabs {
+  display: none;
+}
+
 .atelier-details-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2676,13 +2680,6 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   .atelier-details-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .atelier-details-grid {
-    grid-template-columns: 1fr;
-    gap: 1.1rem;
   }
 }
 
@@ -3015,11 +3012,55 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
     line-height: 1.45;
   }
 
+  .atelier-mobile-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.35rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .atelier-tab-pill {
+    padding: 0.58rem 0.2rem;
+    background: #FFFFFF;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    font-family: var(--font-sans);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    transition: all var(--transition-fast);
+  }
+
+  .atelier-tab-pill.active {
+    background: var(--color-black);
+    color: #FFFFFF;
+    border-color: var(--color-black);
+  }
+
   .atelier-details-grid {
-    gap: 0.85rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0.75rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+
+  .atelier-details-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .atelier-card {
+    flex: 0 0 88%;
+    max-width: 88%;
+    scroll-snap-align: start;
     padding: 1.25rem 1.15rem;
   }
 

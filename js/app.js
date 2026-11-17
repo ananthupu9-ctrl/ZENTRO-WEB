@@ -773,4 +773,55 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
     }, { passive: true });
   }
 
+  /* ==========================================================================
+     8. ATELIER VISIT MOBILE TAB SWITCHER & SWIPE SYNC
+     ========================================================================== */
+  const atelierTabsWrap = document.getElementById('atelierMobileTabs');
+  const atelierGrid = document.getElementById('atelierDetailsGrid');
+
+  if (atelierTabsWrap && atelierGrid) {
+    const tabBtns = Array.from(atelierTabsWrap.querySelectorAll('[data-atelier-tab]'));
+    const atelierCards = Array.from(atelierGrid.querySelectorAll('.atelier-card'));
+
+    const setActiveAtelierTab = (idx) => {
+      tabBtns.forEach((btn, i) => {
+        const isActive = i === idx;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    };
+
+    tabBtns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        const targetCard = atelierCards[idx];
+        if (!targetCard) return;
+        setActiveAtelierTab(idx);
+        atelierGrid.scrollTo({
+          left: targetCard.offsetLeft - atelierGrid.offsetLeft,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    let atelierScrollTicking = false;
+    atelierGrid.addEventListener('scroll', () => {
+      if (atelierScrollTicking) return;
+      atelierScrollTicking = true;
+      window.requestAnimationFrame(() => {
+        const scrollLeft = atelierGrid.scrollLeft;
+        let closestIdx = 0;
+        let minDistance = Infinity;
+        atelierCards.forEach((card, i) => {
+          const dist = Math.abs((card.offsetLeft - atelierGrid.offsetLeft) - scrollLeft);
+          if (dist < minDistance) {
+            minDistance = dist;
+            closestIdx = i;
+          }
+        });
+        setActiveAtelierTab(closestIdx);
+        atelierScrollTicking = false;
+      });
+    }, { passive: true });
+  }
+
 });
