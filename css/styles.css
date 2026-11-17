@@ -2647,7 +2647,10 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
 
 @media (max-width: 640px) {
   .timing-highlight {
-    font-size: 1.2rem;
+    font-size: clamp(0.85rem, 3.6vw, 0.98rem);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.4rem;
   }
 }
 
@@ -2844,27 +2847,101 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
     line-height: 1.65;
   }
 
+  .atelier-visit-section {
+    padding: 2.75rem 1.15rem;
+  }
+
+  .atelier-visit-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .atelier-main-title {
+    font-size: 1.65rem;
+    line-height: 1.06;
+  }
+
+  .atelier-sub-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    line-height: 1.45;
+  }
+
+  .atelier-details-grid {
+    gap: 0.85rem;
+  }
+
+  .atelier-card {
+    padding: 1.25rem 1.15rem;
+  }
+
+  .atelier-card-num {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .atelier-card-heading {
+    font-size: 1.08rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .atelier-card-body {
+    gap: 0.45rem;
+  }
+
+  .atelier-card > div:last-child {
+    margin-top: 0.9rem !important;
+  }
+
+  .atelier-card:nth-child(3) > div:last-child {
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .atelier-card:nth-child(3) .map-link {
+    margin-top: 0;
+  }
+
+  .payment-highlight {
+    font-size: 0.88rem;
+  }
+
   .contact-val.highlight {
-    font-size: 1rem;
+    font-size: 0.94rem;
+  }
+
+  .contact-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.55rem;
+    margin-top: 0.95rem !important;
   }
 
   .atelier-cta-btn,
   .atelier-wa-btn {
-    padding: 0.9rem 1rem;
-    font-size: 0.75rem;
+    padding: 0.78rem 0.55rem;
+    font-size: 0.64rem;
+    letter-spacing: 0.09em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
   }
 
   .timing-sub,
   .payment-methods-list,
   .address-text {
-    font-size: 0.85rem;
-    line-height: 1.6;
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   .timing-note,
   .payment-sub {
-    font-size: 0.78rem;
-    line-height: 1.55;
+    font-size: 0.74rem;
+    line-height: 1.45;
   }
 
   .footer-copy {
