@@ -812,7 +812,7 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
       archiveBadge: 'DISCIPLINE 01 / 03',
       eyebrow: 'ATELIER DISCIPLINE 01 • HAIR ARCHITECTURE',
       title: 'Haute Coiffure',
-      image: 'assets/model_single.jpg',
+      image: 'assets/discipline_coiffure.jpg',
       imageAlt: 'Haute Coiffure — Hair Architecture at Zentro Kavanur',
       lead: 'At Zentro, hairdressing is treated as living architecture. Every silhouette is engineered around your facial geometry, natural hair growth patterns, and Kerala’s humid climate—delivering effortless movement that grows out with grace for months.',
       metrics: [
@@ -865,7 +865,7 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
       archiveBadge: 'DISCIPLINE 02 / 03',
       eyebrow: 'ATELIER DISCIPLINE 02 • CLINICAL SKIN WELLNESS',
       title: 'Clinical Derma',
-      image: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80',
+      image: 'assets/discipline_derma.jpg',
       imageAlt: 'Clinical Derma — Advanced Skin & Hydra Facial at Zentro Kavanur',
       lead: 'Calm, science-led skin restoration without aggressive downtime. Our clinical derma suite pairs multi-stage vortex hydration with dermatologically vetted actives to calm sensitivity, clear congestion, and restore luminous glass-skin clarity.',
       metrics: [
@@ -917,7 +917,7 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
       archiveBadge: 'DISCIPLINE 03 / 03',
       eyebrow: 'ATELIER DISCIPLINE 03 • EXECUTIVE MEN’S TAILORING',
       title: "Men's Grooming",
-      image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80',
+      image: 'assets/discipline_grooming.jpg',
       imageAlt: "Men's Grooming — Precision Haircuts & Beard Sculpting at Zentro Kavanur",
       lead: 'Modern masculine grooming elevated into a calm, architectural ritual. From razor-clean taper fades and structured scissor cuts to sculpted beard geometry, scalp detox, and groom prep—crafted with clinical precision in a serene setting.',
       metrics: [

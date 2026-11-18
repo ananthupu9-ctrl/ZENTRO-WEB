@@ -983,6 +983,7 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.8s var(--transition-smooth);
 }
 
