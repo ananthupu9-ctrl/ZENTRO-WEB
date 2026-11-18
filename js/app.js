@@ -18,66 +18,51 @@ document.addEventListener('DOMContentLoaded', () => {
   const SALON_SERVICES = [
     {
       id: '01',
-      title: 'Morphology Precision Cut & Blowout',
-      category: 'hair',
-      categoryLabel: 'Haute Coiffure',
-      price: 'FROM ₹850',
-      description: 'Bespoke geometric lines & silhouette sculpting for facial harmony.',
-      keywords: 'hair haircut style blowout morphology trimming layers bob'
+      title: 'Bridal & Groom Makeup',
+      category: 'bridal',
+      categoryLabel: 'Wedding Atelier',
+      description: 'Bespoke bridal makeup, hair styling, pre-wedding trials & groom grooming.',
+      keywords: 'bridal wedding groom makeup couture suite trial styling reception'
     },
     {
       id: '02',
-      title: 'French Balayage & Dimension Glaze',
-      category: 'color',
-      categoryLabel: 'Color Architecture',
-      price: 'FROM ₹4,500',
-      description: 'Hand-painted seamless depth & dimensional tone gloss.',
-      keywords: 'balayage color glaze highlights blonde brunette dimension'
+      title: 'Haircuts & Hair Styling',
+      category: 'hair',
+      categoryLabel: 'Hair Architecture',
+      description: 'Precision haircuts, blowouts, fades, layers & bespoke styling for men and women.',
+      keywords: 'hair haircut styling blowout fade beard trimming layers bob men women'
     },
     {
       id: '03',
-      title: 'K-Gloss Silk Architecture (Formaldehyde-Free)',
+      title: 'Hair Treatments',
       category: 'hair',
       categoryLabel: 'Hair Therapy',
-      price: 'FROM ₹6,000',
-      description: 'Vortex keratin sealing for deep frizz-free liquid shine.',
-      keywords: 'keratin smoothing kgloss silk straightening protein repair'
+      description: 'Keratin, smoothing, deep conditioning, scalp therapy & restorative hair rituals.',
+      keywords: 'hair treatments keratin smoothing botox protein repair spa scalp shine'
     },
     {
       id: '04',
-      title: 'Clinical Hydra-Infusion & Korean Glass Skin',
-      category: 'skin',
-      categoryLabel: 'Clinical Derma',
-      price: 'FROM ₹2,800',
-      description: 'Micro-exfoliation vortex cellular infusion & 24K dermal clarity.',
-      keywords: 'facial hydra skin derma glow glass korean peel extraction'
+      title: 'Hair Colouring',
+      category: 'color',
+      categoryLabel: 'Color Studio',
+      description: 'Global colour, French balayage, highlights, root touch-up & dimensional gloss.',
+      keywords: 'hair colouring coloring color balayage highlights glaze blonde brunette root'
     },
     {
       id: '05',
-      title: "Executive Men's Fade & Beard Sculpting",
-      category: 'men',
-      categoryLabel: "Men's Tailoring",
-      price: 'FROM ₹650',
-      description: 'Razor-sharp low/mid taper & architectural facial grooming.',
-      keywords: 'men fade beard taper trimming shave mustache haircut'
+      title: 'Advanced Skin Treatments',
+      category: 'skin',
+      categoryLabel: 'Clinical Derma',
+      description: 'Clinical skin rejuvenation, brightening rituals, peels & customized dermal care.',
+      keywords: 'advanced skin treatments derma clinical peel brightening glow facial glass skin'
     },
     {
       id: '06',
-      title: 'Russian Dry Manicure & Builder Gel BIAB',
-      category: 'nails',
-      categoryLabel: 'Nail Architecture',
-      price: 'FROM ₹1,600',
-      description: 'Diamond electronic e-file cuticle detailing & structured builder gel.',
-      keywords: 'nails manicure biab russian gel polish pedicure cuticle'
-    },
-    {
-      id: '07',
-      title: 'Couture Bridal & Groom Suite (Bespoke Trial & Rituals)',
-      category: 'bridal',
-      categoryLabel: 'Wedding Atelier',
-      price: 'FROM ₹12,000',
-      description: 'Private suite ritual, trial styling, 24K bridal radiance & groom architecture.',
-      keywords: 'bridal wedding groom couture suite trial makeup wedding styling'
+      title: 'Hydra Facial',
+      category: 'skin',
+      categoryLabel: 'Hydra Infusion',
+      description: 'Deep vortex cleansing, gentle exfoliation, extraction & intensive hydration glow.',
+      keywords: 'hydra facial hydrafacial skin hydration glow cleanup extraction derma'
     }
   ];
 
@@ -288,7 +273,6 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
           <span class="search-result-title">${s.title}</span>
         </div>
         <div class="search-result-meta">
-          <span class="search-result-price">${s.price}</span>
           <button type="button" class="search-result-btn" data-book-service="${s.title}">
             RESERVE →
           </button>
