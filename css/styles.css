@@ -2329,16 +2329,183 @@ p, li, span, a, .atelier-card-body, .noir-card-quote {
   width: 100%;
   max-width: 760px;
   max-height: 90vh;
+  max-height: 90dvh;
   border: 1px solid var(--color-border);
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
   overflow-y: auto;
   position: relative;
   padding: 2.5rem;
+  box-sizing: border-box;
+}
+
+.booking-modal-dialog {
+  max-width: 560px;
+  padding: 2rem;
+}
+
+.booking-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 1.35rem;
+  gap: 1rem;
+}
+
+.booking-modal-logo {
+  height: 20px;
+  width: auto;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.booking-modal-eyebrow {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  display: block;
+}
+
+.booking-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 0.2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.booking-modal-close {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--color-black);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.booking-modal-close:hover {
+  background: var(--color-black);
+  color: #FFFFFF;
+  border-color: var(--color-black);
+}
+
+.booking-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.booking-field {
+  min-width: 0;
+}
+
+.booking-field-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-black);
+}
+
+.booking-input {
+  width: 100%;
+  padding: 0.78rem 0.85rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 0;
+  background: #FFFFFF;
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.booking-input:focus {
+  border-color: var(--color-black);
+}
+
+.booking-submit-btn {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: var(--color-black);
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  margin-top: 0.35rem;
+}
+
+.booking-submit-btn:hover {
+  opacity: 0.88;
 }
 
 @media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.75rem;
+    align-items: center;
+  }
+
   .modal-dialog {
-    padding: 1.5rem;
+    padding: 1.35rem 1.15rem;
+    max-height: 92dvh;
+  }
+
+  .booking-modal-dialog {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .booking-modal-header {
+    padding-bottom: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .booking-modal-logo {
+    height: 18px;
+    margin-bottom: 0.3rem;
+  }
+
+  .booking-modal-title {
+    font-size: 1.2rem;
+  }
+
+  .booking-form-fields {
+    gap: 0.85rem;
+  }
+
+  .booking-field-label {
+    font-size: 0.6rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .booking-input {
+    padding: 0.7rem 0.75rem;
+    min-height: 44px;
+  }
+
+  .booking-submit-btn {
+    padding: 0.92rem 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    margin-top: 0.25rem;
   }
 }
 

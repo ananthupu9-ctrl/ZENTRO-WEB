@@ -124,10 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
     bookingModal?.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 
-    // Focus guest name on open
-    setTimeout(() => {
-      guestNameInput?.focus();
-    }, 80);
+    const dialog = bookingModal?.querySelector('.modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+
+    // Only auto-focus on desktop so mobile doesn't scroll past the modal header or pop up keyboard
+    if (window.innerWidth > 768) {
+      setTimeout(() => {
+        guestNameInput?.focus();
+      }, 80);
+    }
   }
 
   function closeBooking() {
@@ -177,28 +182,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedDate = bookingDateInput ? bookingDateInput.value : '';
     const selectedTime = timeSlotSelect ? timeSlotSelect.value : '02:00 PM (IST)';
 
-    // Selected payment mode (Cash or UPI)
-    const selectedPayRadio = document.querySelector('input[name="paymentPreference"]:checked');
-    const paymentMode = selectedPayRadio ? selectedPayRadio.value : 'Cash at Reception';
-
     // Update confirmation screen placeholders
     if (guestPlaceholder) guestPlaceholder.textContent = name || 'Valued Guest';
     if (timePlaceholder) timePlaceholder.textContent = `${selectedDate ? selectedDate + ' • ' : ''}${selectedTime}`;
-    if (paymentPlaceholder) {
-      paymentPlaceholder.textContent = paymentMode.includes('UPI')
-        ? '📱 UPI (GPay / PhonePe / Paytm)'
-        : '💵 Cash at Reception';
-    }
 
     // Professional WhatsApp Message Payload
     const msgText = `*ZENTRO UNISEX SALON — APPOINTMENT RESERVATION*
 ━━━━━━━━━━━━━━━━━━━━━━
 👤 *Guest Name:* ${name}
 📞 *Mobile / WhatsApp:* ${phone}
-💇 *Service / Ritual:* ${selectedService}
+💇 *Service:* ${selectedService}
 📅 *Preferred Date:* ${selectedDate || 'Upcoming Slot'}
 ⏰ *Preferred Time:* ${selectedTime}
-💵 *Payment Mode:* ${paymentMode} (Zero Advance)
 📍 *Location:* Kavanur, Malappuram (https://maps.google.com/?q=11.194972,76.064611)
 ━━━━━━━━━━━━━━━━━━━━━━
 _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;

@@ -1088,23 +1088,23 @@
        INTERACTIVE APPOINTMENT CONCIERGE MODAL
        ========================================================================== -->
   <div id="bookingModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Reserve Appointment">
-    <div class="modal-dialog">
+    <div class="modal-dialog booking-modal-dialog">
       
-      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); margin-bottom: 2rem;">
+      <div class="booking-modal-header">
         <div>
-          <img src="assets/zentro_logo_black.png" alt="Zentro" style="height: 22px; width: auto; margin-bottom: 0.5rem; display: block;">
-          <span style="font-size: 0.625rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-muted);">Concierge Desk</span>
-          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin-top: 0.25rem;">Reserve Appointment</h3>
+          <img src="assets/zentro_logo_black.png" alt="Zentro" class="booking-modal-logo">
+          <span class="booking-modal-eyebrow">Concierge Desk</span>
+          <h3 class="booking-modal-title">Reserve Appointment</h3>
         </div>
-        <button data-close-modal style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-black);">✕</button>
+        <button type="button" data-close-modal class="booking-modal-close" aria-label="Close Reservation">✕</button>
       </div>
 
       <form id="bookingFinalForm">
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="booking-form-fields">
           
-          <div>
-            <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Select Discipline & Ritual</label>
-            <select id="modalServiceSelect" style="width: 100%; padding: 0.85rem; border: 1.5px solid var(--color-border); background: #FFFFFF; font-family: inherit; font-size: 0.875rem; font-weight: 600;">
+          <div class="booking-field">
+            <label for="modalServiceSelect" class="booking-field-label">Select Service</label>
+            <select id="modalServiceSelect" class="booking-input">
               <option value="Bridal & Groom Makeup">Bridal & Groom Makeup</option>
               <option value="Haircuts & Hair Styling">Haircuts & Hair Styling</option>
               <option value="Hair Treatments">Hair Treatments</option>
@@ -1115,60 +1115,36 @@
           </div>
 
           <div class="modal-date-time-grid">
-            <div>
-              <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Preferred Date</label>
-              <input type="date" id="modalBookingDate" value="2026-11-17" style="width: 100%; padding: 0.85rem; border: 1.5px solid var(--color-border); background: #FFFFFF; font-family: inherit; font-size: 0.875rem;">
+            <div class="booking-field">
+              <label for="modalBookingDate" class="booking-field-label">Preferred Date</label>
+              <input type="date" id="modalBookingDate" value="2026-11-18" class="booking-input">
             </div>
-            <div>
-              <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Preferred Time Slot (IST)</label>
-              <select id="modalTimeSlotSelect" style="width: 100%; padding: 0.85rem; border: 1.5px solid var(--color-border); background: #FFFFFF; font-family: inherit; font-size: 0.875rem;">
-                <option value="09:30 AM (IST)">09:30 AM (Morning Slot)</option>
-                <option value="11:00 AM (IST)">11:00 AM (Morning Slot)</option>
-                <option value="12:30 PM (IST)">12:30 PM (Midday Slot)</option>
-                <option value="02:00 PM (IST)" selected>02:00 PM (Afternoon Slot)</option>
-                <option value="03:30 PM (IST)">03:30 PM (Afternoon Slot)</option>
-                <option value="05:00 PM (IST)">05:00 PM (Evening Slot)</option>
-                <option value="06:30 PM (IST)">06:30 PM (Evening Slot)</option>
-                <option value="08:00 PM (IST)">08:00 PM (Night Slot — Closes 9:00 PM IST)</option>
+            <div class="booking-field">
+              <label for="modalTimeSlotSelect" class="booking-field-label">Time Slot (IST)</label>
+              <select id="modalTimeSlotSelect" class="booking-input">
+                <option value="09:30 AM (IST)">09:30 AM (Morning)</option>
+                <option value="11:00 AM (IST)">11:00 AM (Morning)</option>
+                <option value="12:30 PM (IST)">12:30 PM (Midday)</option>
+                <option value="02:00 PM (IST)" selected>02:00 PM (Afternoon)</option>
+                <option value="03:30 PM (IST)">03:30 PM (Afternoon)</option>
+                <option value="05:00 PM (IST)">05:00 PM (Evening)</option>
+                <option value="06:30 PM (IST)">06:30 PM (Evening)</option>
+                <option value="08:00 PM (IST)">08:00 PM (Night)</option>
               </select>
             </div>
           </div>
 
-          <div>
-            <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Guest Full Name</label>
-            <input type="text" id="guestFullName" placeholder="e.g. Rahul Menon / Ananya Sharma" required style="width: 100%; padding: 0.85rem; border: 1.5px solid var(--color-border); background: #FFFFFF; font-family: inherit; font-size: 0.875rem;">
+          <div class="booking-field">
+            <label for="guestFullName" class="booking-field-label">Guest Full Name</label>
+            <input type="text" id="guestFullName" placeholder="e.g. Rahul Menon / Ananya Sharma" required class="booking-input">
           </div>
 
-          <div>
-            <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Indian Mobile / WhatsApp Number (+91)</label>
-            <input type="tel" id="guestPhone" placeholder="+91 9074 616121 (10-digit mobile)" required style="width: 100%; padding: 0.85rem; border: 1.5px solid var(--color-border); background: #FFFFFF; font-family: inherit; font-size: 0.875rem;">
+          <div class="booking-field">
+            <label for="guestPhone" class="booking-field-label">Mobile / WhatsApp Number (+91)</label>
+            <input type="tel" id="guestPhone" placeholder="+91 9074 616121 (10-digit mobile)" required class="booking-input">
           </div>
 
-          <div>
-            <label style="font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">
-              Payment Preference at Salon Counter (Pay After Service)
-            </label>
-            <div class="payment-selector-group">
-              <label class="payment-method-card active">
-                <input type="radio" name="paymentPreference" value="Cash at Reception" checked>
-                <span class="payment-icon-label">💵</span>
-                <span class="payment-title">Cash at Reception</span>
-                <span class="payment-desc">Pay Indian Cash (₹) directly at reception counter</span>
-              </label>
-              <label class="payment-method-card">
-                <input type="radio" name="paymentPreference" value="UPI (GPay / PhonePe / Paytm)">
-                <span class="payment-icon-label">📱</span>
-                <span class="payment-title">UPI / QR Code</span>
-                <span class="payment-desc">Google Pay, PhonePe, Paytm instant scan</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="payment-reassurance">
-            ✦ <strong>Zero Advance Online Payment Required.</strong> Settle your bill comfortably via <strong>Cash</strong> or <strong>UPI (GPay/PhonePe)</strong> directly at the Zentro salon desk in Kavanur, Malappuram.
-          </div>
-
-          <button type="submit" style="padding: 1.1rem; background: var(--color-black); color: #FFFFFF; border: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: opacity var(--transition-fast); margin-top: 0.25rem;">
+          <button type="submit" class="booking-submit-btn">
             RESERVE ON WHATSAPP 💬 →
           </button>
 
@@ -1176,42 +1152,34 @@
       </form>
 
       <!-- Confirmation Screen -->
-      <div id="bookingConfirmedScreen" class="hidden" style="text-align: center; padding: 2.5rem 1rem;">
-        <div style="width: 54px; height: 54px; border-radius: 50%; background: #25D366; color: #FFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; font-size: 1.5rem;">✓</div>
-        <h4 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Reservation Dispatched</h4>
+      <div id="bookingConfirmedScreen" class="hidden" style="text-align: center; padding: 1.75rem 0.5rem;">
+        <div style="width: 50px; height: 50px; border-radius: 50%; background: #25D366; color: #FFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 1.35rem;">✓</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.45rem; letter-spacing: -0.02em;">Reservation Dispatched</h4>
         
-        <p style="font-size: 0.9375rem; color: var(--color-black); max-width: 440px; margin: 0 auto 1rem auto; line-height: 1.5;">
+        <p style="font-size: 0.875rem; color: var(--color-black); max-width: 420px; margin: 0 auto 1.15rem auto; line-height: 1.5;">
           Thank you, <strong id="confirmedGuestPlaceholder">Valued Guest</strong>.<br>
-          Your appointment details have been sent directly to the Zentro Kavanur WhatsApp desk (+91 9074 616121).
+          Your appointment request has been sent to the Zentro Kavanur WhatsApp desk (+91 9074 616121).
         </p>
 
-        <div style="max-width: 420px; margin: 0 auto 1.75rem auto; background: #FFFFFF; border: 1px solid var(--color-border); padding: 1.25rem; text-align: left; font-size: 0.8125rem; display: flex; flex-direction: column; gap: 0.45rem;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <span style="color: var(--color-muted); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Location:</span>
+        <div style="max-width: 400px; margin: 0 auto 1.4rem auto; background: #FFFFFF; border: 1px solid var(--color-border); padding: 1rem 1.1rem; text-align: left; font-size: 0.8125rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem;">
+            <span style="color: var(--color-muted); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Location:</span>
             <div style="text-align: right;">
               <strong>Kavanur, Malappuram</strong><br>
               <a href="https://www.google.com/maps?q=11%C2%B011%2741.9%22N+76%C2%B003%2752.6%22E" target="_blank" rel="noopener" style="color: var(--color-black); font-size: 0.6875rem; text-decoration: underline;">Open Map (11°11'41.9"N) ↗</a>
             </div>
           </div>
-          <div style="display: flex; justify-content: space-between;">
-            <span style="color: var(--color-muted); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Time Slot:</span>
+          <div style="display: flex; justify-content: space-between; gap: 0.75rem;">
+            <span style="color: var(--color-muted); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Time Slot:</span>
             <strong id="confirmedTimePlaceholder">02:00 PM (IST)</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
-            <span style="color: var(--color-muted); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Payment Mode:</span>
-            <strong id="confirmedPaymentPlaceholder">💵 Cash at Reception</strong>
-          </div>
-          <div style="display: flex; justify-content: space-between;">
-            <span style="color: var(--color-muted); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;">Advance Paid:</span>
-            <strong>₹0 (Pay after service)</strong>
           </div>
         </div>
 
-        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-          <a id="confirmedWhatsAppBtn" href="https://wa.me/919074616121" target="_blank" style="padding: 0.85rem 1.5rem; background: #25D366; color: #FFF; text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;">
+        <div style="display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap;">
+          <a id="confirmedWhatsAppBtn" href="https://wa.me/919074616121" target="_blank" style="padding: 0.8rem 1.35rem; background: #25D366; color: #FFF; text-decoration: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">
             💬 OPEN WHATSAPP CHAT
           </a>
-          <button data-close-modal style="padding: 0.85rem 2rem; border: 1.5px solid var(--color-black); background: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer;">
+          <button type="button" data-close-modal style="padding: 0.8rem 1.5rem; border: 1.5px solid var(--color-black); background: none; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;">
             CLOSE
           </button>
         </div>
