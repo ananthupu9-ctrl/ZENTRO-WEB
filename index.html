@@ -271,7 +271,7 @@
     <div class="collection-grid">
       
       <!-- Card 1: Haute Coiffure -->
-      <div class="collection-item" data-open-booking data-service="Haute Coiffure">
+      <div class="collection-item" data-open-discipline="coiffure" role="button" tabindex="0" aria-label="Explore Haute Coiffure">
         <div class="collection-media">
           <img src="assets/model_single.jpg" alt="Haute Coiffure / Hair Architecture">
         </div>
@@ -282,7 +282,7 @@
       </div>
 
       <!-- Card 2: Clinical Derma -->
-      <div class="collection-item" data-open-booking data-service="Clinical Derma">
+      <div class="collection-item" data-open-discipline="derma" role="button" tabindex="0" aria-label="Explore Clinical Derma">
         <div class="collection-media">
           <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80" alt="Clinical Skin Therapies">
         </div>
@@ -293,7 +293,7 @@
       </div>
 
       <!-- Card 3: Men's Grooming -->
-      <div class="collection-item" data-open-booking data-service="Men's Tailoring">
+      <div class="collection-item" data-open-discipline="grooming" role="button" tabindex="0" aria-label="Explore Men's Grooming">
         <div class="collection-media">
           <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Men's Precision Grooming">
         </div>
@@ -1081,6 +1081,78 @@
         <!-- Live rendered search items -->
       </div>
 
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       EDITORIAL DISCIPLINE DOSSIER MODAL (SENIOR ARCHITECTURAL EXPLORE OVERLAY)
+       ========================================================================== -->
+  <div id="disciplineModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="disciplineModalTitle">
+    <div class="modal-dialog discipline-modal-dialog">
+
+      <!-- Left Architectural Portrait Column -->
+      <div class="discipline-visual-col">
+        <img id="disciplineImage" src="assets/model_single.jpg" alt="Zentro Discipline">
+        <div class="discipline-visual-scrim"></div>
+        <span id="disciplineArchiveBadge" class="discipline-archive-badge">DISCIPLINE 01 / 03</span>
+        <button type="button" class="discipline-mobile-close" data-close-discipline aria-label="Close Discipline Dossier">✕</button>
+        <div class="discipline-visual-metrics" id="disciplineMetrics">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Right Editorial Dossier Column -->
+      <div class="discipline-content-col">
+
+        <!-- Sticky Top Switcher & Close Bar -->
+        <div class="discipline-top-bar">
+          <div class="discipline-switcher" role="tablist" aria-label="Switch Atelier Discipline">
+            <button type="button" class="discipline-switch-btn active" data-switch-discipline="coiffure" role="tab" aria-selected="true">01 Coiffure</button>
+            <button type="button" class="discipline-switch-btn" data-switch-discipline="derma" role="tab" aria-selected="false">02 Derma</button>
+            <button type="button" class="discipline-switch-btn" data-switch-discipline="grooming" role="tab" aria-selected="false">03 Grooming</button>
+          </div>
+          <button type="button" class="booking-modal-close discipline-desktop-close" data-close-discipline aria-label="Close Discipline Dossier">✕</button>
+        </div>
+
+        <!-- Scrollable Editorial Narrative -->
+        <div class="discipline-scroll-body" id="disciplineScrollBody">
+          <span id="disciplineEyebrow" class="discipline-eyebrow">ATELIER DISCIPLINE 01 • HAIR ARCHITECTURE</span>
+          <h3 id="disciplineModalTitle" class="discipline-title">Haute Coiffure</h3>
+          <p id="disciplineLead" class="discipline-lead"></p>
+
+          <!-- The Zentro 4-Step Protocol -->
+          <div class="discipline-section-block">
+            <span class="discipline-sub-label">THE ZENTRO PROTOCOL</span>
+            <div class="discipline-protocol-list" id="disciplineProtocolList">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Curated Services Under This Discipline (Tap to Reserve Directly) -->
+          <div class="discipline-section-block">
+            <span class="discipline-sub-label">SIGNATURE SERVICES IN THIS DISCIPLINE</span>
+            <div class="discipline-services-pills" id="disciplineServicesList">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Atelier Standards & Ideal Guest Grid -->
+          <div class="discipline-standards-grid" id="disciplineStandardsGrid">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Sticky Bottom Conversion Bar -->
+        <div class="discipline-footer-bar">
+          <button type="button" id="disciplineReserveBtn" class="discipline-primary-cta">
+            RESERVE THIS DISCIPLINE →
+          </button>
+          <a id="disciplineWhatsAppLink" href="https://wa.me/919074616121" target="_blank" rel="noopener" class="discipline-secondary-cta">
+            ASK CONCIERGE ↗
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 

@@ -803,4 +803,318 @@ _Please confirm my reservation slot at Zentro Kavanur. Thank you!_`;
     }, { passive: true });
   }
 
+  /* ==========================================================================
+     9. EDITORIAL DISCIPLINE DOSSIER MODAL (HAUTE COIFFURE / DERMA / GROOMING)
+     ========================================================================== */
+  const DISCIPLINE_DOSSIERS = {
+    coiffure: {
+      key: 'coiffure',
+      archiveBadge: 'DISCIPLINE 01 / 03',
+      eyebrow: 'ATELIER DISCIPLINE 01 • HAIR ARCHITECTURE',
+      title: 'Haute Coiffure',
+      image: 'assets/model_single.jpg',
+      imageAlt: 'Haute Coiffure — Hair Architecture at Zentro Kavanur',
+      lead: 'At Zentro, hairdressing is treated as living architecture. Every silhouette is engineered around your facial geometry, natural hair growth patterns, and Kerala’s humid climate—delivering effortless movement that grows out with grace for months.',
+      metrics: [
+        { label: 'SESSION', val: '45–120 Min' },
+        { label: 'CONSULT', val: 'Included' },
+        { label: 'FORMULAS', val: 'Ammonia-Free' }
+      ],
+      protocol: [
+        {
+          num: '01',
+          title: 'Morphology & Scalp Consultation',
+          desc: 'One-on-one analysis of facial proportions, natural fall, density, and cuticle health before selecting your cut, colour, or therapy.'
+        },
+        {
+          num: '02',
+          title: 'Precision Wet & Dry Tailoring',
+          desc: 'Architectural sectioning and micro-texturizing crafted to hold shape naturally—even without heavy daily heat styling.'
+        },
+        {
+          num: '03',
+          title: 'Bond Protection & Botanical Infusion',
+          desc: 'Formaldehyde-free smoothing, restorative bond therapies, and dimensional colour glazes that preserve silkiness and shine.'
+        },
+        {
+          num: '04',
+          title: 'Editorial Finish & Care Blueprint',
+          desc: 'Signature salon styling paired with a practical home-care routine suited to your hair texture and lifestyle.'
+        }
+      ],
+      services: [
+        'Haircuts & Hair Styling',
+        'Hair Treatments',
+        'Hair Colouring',
+        'Bridal & Groom Makeup'
+      ],
+      defaultBookingService: 'Haircuts & Hair Styling',
+      standards: [
+        {
+          heading: 'CRAFTED FOR',
+          text: 'Women & families seeking structured cuts, luminous colour, frizz control, or bespoke bridal styling.'
+        },
+        {
+          heading: 'ATELIER STANDARD',
+          text: 'Internationally certified stylists, sanitized Japanese shears, and private acoustic suites on request.'
+        }
+      ]
+    },
+    derma: {
+      key: 'derma',
+      archiveBadge: 'DISCIPLINE 02 / 03',
+      eyebrow: 'ATELIER DISCIPLINE 02 • CLINICAL SKIN WELLNESS',
+      title: 'Clinical Derma',
+      image: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Clinical Derma — Advanced Skin & Hydra Facial at Zentro Kavanur',
+      lead: 'Calm, science-led skin restoration without aggressive downtime. Our clinical derma suite pairs multi-stage vortex hydration with dermatologically vetted actives to calm sensitivity, clear congestion, and restore luminous glass-skin clarity.',
+      metrics: [
+        { label: 'SESSION', val: '60–90 Min' },
+        { label: 'SKIN CHECK', val: 'Personalized' },
+        { label: 'DOWNTIME', val: 'Zero Redness' }
+      ],
+      protocol: [
+        {
+          num: '01',
+          title: 'Dermal Barrier & Hydration Mapping',
+          desc: 'Detailed assessment of skin type, sensitivity, pigmentation, and pore congestion to customize every serum and step.'
+        },
+        {
+          num: '02',
+          title: 'Gentle Exfoliation & Vortex Extraction',
+          desc: 'Pain-free ultrasonic and hydra-vortex cleansing that lifts impurities while protecting delicate skin barriers.'
+        },
+        {
+          num: '03',
+          title: 'Targeted Cellular Infusion',
+          desc: 'Layered hyaluronic, peptide, and antioxidant serums tailored for deep radiance, even tone, and lasting plumpness.'
+        },
+        {
+          num: '04',
+          title: 'Cryo-Calm & Barrier Seal',
+          desc: 'Soothing cold therapy and breathable SPF protection so you step out immediately glowing—ready for daily life or wedding events.'
+        }
+      ],
+      services: [
+        'Hydra Facial',
+        'Advanced Skin Treatments',
+        'Bridal & Groom Makeup'
+      ],
+      defaultBookingService: 'Hydra Facial',
+      standards: [
+        {
+          heading: 'CRAFTED FOR',
+          text: 'Dullness, tan, uneven texture, clogged pores, pre-wedding skin prep, and monthly barrier renewal.'
+        },
+        {
+          heading: 'ATELIER STANDARD',
+          text: 'Single-use sterile tips, hospital-grade autoclave hygiene, and gentle dermatologist-approved formulations.'
+        }
+      ]
+    },
+    grooming: {
+      key: 'grooming',
+      archiveBadge: 'DISCIPLINE 03 / 03',
+      eyebrow: 'ATELIER DISCIPLINE 03 • EXECUTIVE MEN’S TAILORING',
+      title: "Men's Grooming",
+      image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80',
+      imageAlt: "Men's Grooming — Precision Haircuts & Beard Sculpting at Zentro Kavanur",
+      lead: 'Modern masculine grooming elevated into a calm, architectural ritual. From razor-clean taper fades and structured scissor cuts to sculpted beard geometry, scalp detox, and groom prep—crafted with clinical precision in a serene setting.',
+      metrics: [
+        { label: 'SESSION', val: '30–75 Min' },
+        { label: 'FINISH', val: 'Razor-Sharp' },
+        { label: 'HYGIENE', val: '100% Sterile' }
+      ],
+      protocol: [
+        {
+          num: '01',
+          title: 'Head Shape & Jawline Blueprint',
+          desc: 'Mapping crown growth, hair density, and beard symmetry to design a sharp, balanced profile tailored to your face.'
+        },
+        {
+          num: '02',
+          title: 'Architectural Cut & Seamless Fade',
+          desc: 'Precision clipper blending and scissor-over-comb detailing for crisp edges that look sharp even weeks later.'
+        },
+        {
+          num: '03',
+          title: 'Beard Sculpting & Hot-Towel Ritual',
+          desc: 'Symmetrical cheek and neckline detailing paired with warm aromatic steam to soften skin and prevent irritation.'
+        },
+        {
+          num: '04',
+          title: 'Scalp Refresh & Matte Styling',
+          desc: 'Cooling scalp cleanse and lightweight editorial styling—leaving you effortlessly polished for work, travel, or weddings.'
+        }
+      ],
+      services: [
+        'Haircuts & Hair Styling',
+        'Hair Treatments',
+        'Hair Colouring',
+        'Hydra Facial',
+        'Bridal & Groom Makeup'
+      ],
+      defaultBookingService: 'Haircuts & Hair Styling',
+      standards: [
+        {
+          heading: 'CRAFTED FOR',
+          text: 'Executives, grooms, and discerning men seeking precision fades, beard architecture, grey blending, and skin clarity.'
+        },
+        {
+          heading: 'ATELIER STANDARD',
+          text: 'Fresh disposable blades for every guest, UV-sterilized tools, and unhurried luxury hospitality.'
+        }
+      ]
+    }
+  };
+
+  const disciplineModal = document.getElementById('disciplineModal');
+  const disciplineImage = document.getElementById('disciplineImage');
+  const disciplineArchiveBadge = document.getElementById('disciplineArchiveBadge');
+  const disciplineMetrics = document.getElementById('disciplineMetrics');
+  const disciplineEyebrow = document.getElementById('disciplineEyebrow');
+  const disciplineTitle = document.getElementById('disciplineModalTitle');
+  const disciplineLead = document.getElementById('disciplineLead');
+  const disciplineProtocolList = document.getElementById('disciplineProtocolList');
+  const disciplineServicesList = document.getElementById('disciplineServicesList');
+  const disciplineStandardsGrid = document.getElementById('disciplineStandardsGrid');
+  const disciplineScrollBody = document.getElementById('disciplineScrollBody');
+  const disciplineReserveBtn = document.getElementById('disciplineReserveBtn');
+  const disciplineWhatsAppLink = document.getElementById('disciplineWhatsAppLink');
+  const disciplineSwitchBtns = document.querySelectorAll('[data-switch-discipline]');
+
+  let activeDisciplineKey = 'coiffure';
+
+  function renderDisciplineDossier(key) {
+    const data = DISCIPLINE_DOSSIERS[key] || DISCIPLINE_DOSSIERS.coiffure;
+    activeDisciplineKey = data.key;
+
+    if (disciplineImage) {
+      disciplineImage.src = data.image;
+      disciplineImage.alt = data.imageAlt;
+    }
+    if (disciplineArchiveBadge) disciplineArchiveBadge.textContent = data.archiveBadge;
+    if (disciplineEyebrow) disciplineEyebrow.textContent = data.eyebrow;
+    if (disciplineTitle) disciplineTitle.textContent = data.title;
+    if (disciplineLead) disciplineLead.textContent = data.lead;
+
+    if (disciplineMetrics) {
+      disciplineMetrics.innerHTML = data.metrics.map(m => `
+        <div class="discipline-metric-item">
+          <span class="discipline-metric-label">${m.label}</span>
+          <span class="discipline-metric-val">${m.val}</span>
+        </div>
+      `).join('');
+    }
+
+    if (disciplineProtocolList) {
+      disciplineProtocolList.innerHTML = data.protocol.map(step => `
+        <div class="discipline-protocol-step">
+          <span class="discipline-step-num">${step.num}</span>
+          <div>
+            <div class="discipline-step-title">${step.title}</div>
+            <p class="discipline-step-desc">${step.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    if (disciplineServicesList) {
+      disciplineServicesList.innerHTML = data.services.map(serviceName => `
+        <button type="button" class="discipline-service-chip" data-dossier-book="${serviceName}">
+          <span>${serviceName}</span>
+          <span>RESERVE →</span>
+        </button>
+      `).join('');
+
+      disciplineServicesList.querySelectorAll('[data-dossier-book]').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const svc = chip.getAttribute('data-dossier-book');
+          closeDiscipline();
+          openBooking(svc);
+        });
+      });
+    }
+
+    if (disciplineStandardsGrid) {
+      disciplineStandardsGrid.innerHTML = data.standards.map(st => `
+        <div class="discipline-standard-box">
+          <span class="discipline-standard-heading">${st.heading}</span>
+          <p class="discipline-standard-text">${st.text}</p>
+        </div>
+      `).join('');
+    }
+
+    if (disciplineReserveBtn) {
+      disciplineReserveBtn.textContent = `RESERVE ${data.title.toUpperCase()} →`;
+      disciplineReserveBtn.onclick = () => {
+        closeDiscipline();
+        openBooking(data.defaultBookingService);
+      };
+    }
+
+    if (disciplineWhatsAppLink) {
+      const waMsg = `Hi Zentro Atelier Kavanur, I would like a consultation regarding ${data.title}.`;
+      disciplineWhatsAppLink.href = `https://wa.me/${ZENTRO_WHATSAPP}?text=${encodeURIComponent(waMsg)}`;
+    }
+
+    disciplineSwitchBtns.forEach(btn => {
+      const isMatch = btn.getAttribute('data-switch-discipline') === data.key;
+      btn.classList.toggle('active', isMatch);
+      btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
+
+    if (disciplineScrollBody) disciplineScrollBody.scrollTop = 0;
+  }
+
+  function openDiscipline(key) {
+    closeSearch();
+    closeBooking();
+    closeMobileDrawer();
+    renderDisciplineDossier(key);
+    disciplineModal?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDiscipline() {
+    disciplineModal?.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-open-discipline]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const key = card.getAttribute('data-open-discipline') || 'coiffure';
+      openDiscipline(key);
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const key = card.getAttribute('data-open-discipline') || 'coiffure';
+        openDiscipline(key);
+      }
+    });
+  });
+
+  disciplineSwitchBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-switch-discipline');
+      if (key) renderDisciplineDossier(key);
+    });
+  });
+
+  document.querySelectorAll('[data-close-discipline]').forEach(btn => {
+    btn.addEventListener('click', closeDiscipline);
+  });
+
+  disciplineModal?.addEventListener('click', (e) => {
+    if (e.target === disciplineModal) closeDiscipline();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && disciplineModal && !disciplineModal.classList.contains('hidden')) {
+      closeDiscipline();
+    }
+  });
+
 });
